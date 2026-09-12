@@ -1,0 +1,234 @@
+:root {
+  /* Colors - Primary Blue Scale */
+  --color-primary-50: hsl(214, 100%, 96%);
+  --color-primary-100: hsl(214, 95%, 90%);
+  --color-primary-200: hsl(214, 96%, 81%);
+  --color-primary-300: hsl(214, 96%, 69%);
+  --color-primary-400: hsl(214, 90%, 58%);
+  --color-primary-500: hsl(214, 57%, 51%); /* Brand Primary */
+  --color-primary-600: hsl(214, 76%, 42%);
+  --color-primary-700: hsl(214, 82%, 34%);
+
+  /* Colors - Accent Amber Gold */
+  --color-accent-400: hsl(45, 100%, 55%);
+  --color-accent-500: hsl(45, 93%, 47%); /* Brand Accent CTA */
+  --color-accent-600: hsl(45, 95%, 40%);
+
+  /* Colors - Neutral */
+  --color-neutral-50: hsl(0, 0%, 98%);
+  --color-neutral-100: hsl(0, 0%, 95%);
+  --color-neutral-200: hsl(0, 0%, 90%);
+  --color-neutral-300: hsl(0, 0%, 82%);
+  --color-neutral-400: hsl(0, 0%, 64%);
+  --color-neutral-500: hsl(0, 0%, 45%);
+  --color-neutral-600: hsl(0, 0%, 32%);
+  --color-neutral-700: hsl(0, 0%, 25%);
+  --color-neutral-800: hsl(0, 0%, 15%);
+  --color-neutral-900: hsl(0, 0%, 9%);
+
+  /* Semantic Colors */
+  --color-success: hsl(142, 71%, 45%);
+  --color-warning: hsl(38, 92%, 50%);
+  --color-error: hsl(348, 83%, 47%);
+  --color-info: hsl(200, 98%, 39%);
+
+  /* Typography */
+  /* Fonts will be overridden by Next.js font variables */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Fluid Text Sizes using clamp */
+  --text-xs: clamp(0.75rem, 0.71rem + 0.18vw, 0.875rem); /* 12px - 14px */
+  --text-sm: clamp(0.875rem, 0.84rem + 0.18vw, 1rem); /* 14px - 16px */
+  --text-base: clamp(1rem, 0.96rem + 0.18vw, 1.125rem); /* 16px - 18px */
+  --text-lg: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem); /* 18px - 22px */
+  --text-xl: clamp(1.25rem, 1.14rem + 0.54vw, 1.625rem); /* 20px - 26px */
+  --text-2xl: clamp(1.5rem, 1.32rem + 0.89vw, 2.125rem); /* 24px - 34px */
+  --text-3xl: clamp(1.75rem, 1.46rem + 1.43vw, 2.75rem); /* 28px - 44px */
+  --text-4xl: clamp(2rem, 1.57rem + 2.14vw, 3.5rem); /* 32px - 56px */
+
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-search: 0 12px 40px rgba(0, 0, 0, 0.12);
+
+  /* Section Padding */
+  --section-padding: clamp(3rem, 5vw, 6rem); /* 48px to 96px */
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-page: 800ms;
+}
+
+/* Complete CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-800);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--duration-fast) var(--ease-out-expo);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+}
+
+input, textarea, select {
+  display: block;
+  width: 100%;
+}
+
+/* Reusable Utility Classes */
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* Responsive Container Max Widths */
+@media (min-width: 580px) {
+  .container { max-width: 540px; padding-inline: var(--space-lg); }
+}
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Headings */
+.h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-md);
+}
+
+.h1, h1 { font-size: var(--text-4xl); }
+.h2, h2 { font-size: var(--text-3xl); }
+.h3, h3 { font-size: var(--text-2xl); }
+.h4, h4 { font-size: var(--text-xl); }
+
+/* Section Typography */
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-primary-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-md);
+}
+
+.section-text {
+  font-size: var(--text-base);
+  color: var(--color-neutral-600);
+  max-width: 600px;
+  margin-bottom: var(--space-xl);
+}
+
+/* Button Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-base);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+  cursor: pointer;
+}

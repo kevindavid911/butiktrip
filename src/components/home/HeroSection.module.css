@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/images/destinations/komodo.jpg') center/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.55) 100%);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 400;
+  color: #f1f5f9;
+  line-height: 1.5;
+  margin-bottom: 48px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

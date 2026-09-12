@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: var(--space-2xl);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-base);
+  transition: all 0.3s ease;
+}
+
+.label {
+  margin-top: var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-neutral-600);
+}
+
+/* States */
+.completed .circle {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.completed .label {
+  color: var(--color-success);
+}
+
+.active .circle {
+  background-color: var(--color-primary-500);
+  color: white;
+  box-shadow: 0 0 0 4px var(--color-primary-100);
+}
+
+.active .label {
+  color: var(--color-primary-600);
+  font-weight: 600;
+}
+
+.upcoming .circle {
+  background-color: white;
+  border: 2px solid var(--color-neutral-300);
+  color: var(--color-neutral-400);
+}
+
+.upcoming .label {
+  color: var(--color-neutral-400);
+}
+
+/* Connecting Lines */
+.line {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-neutral-200);
+  z-index: 1;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--color-success);
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .label {
+    display: none;
+  }
+}

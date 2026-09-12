@@ -1,0 +1,124 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: var(--space-lg);
+  padding: var(--space-md) 4px var(--space-xl);
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 min(100%, 400px);
+  min-width: 320px;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  scroll-snap-align: center;
+  position: relative;
+}
+
+.quoteIcon {
+  font-family: serif;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--color-primary-100);
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-lg);
+  opacity: 0.5;
+}
+
+.comment {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-neutral-700);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 var(--space-lg) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-neutral-100);
+  margin-bottom: var(--space-lg);
+}
+
+.authorArea {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nameRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  font-size: var(--text-base);
+}
+
+.location {
+  font-size: var(--text-xs);
+  color: var(--color-neutral-500);
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-neutral-300);
+  transition: all 0.3s ease;
+}
+
+.active {
+  background-color: var(--color-primary-500);
+  width: 24px;
+}

@@ -1,0 +1,65 @@
+.ratingContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+}
+
+.starsWrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.star {
+  display: inline-block;
+  line-height: 1;
+}
+
+.star.filled {
+  color: var(--color-accent-500);
+}
+
+.star.empty {
+  color: var(--color-neutral-300);
+}
+
+/* For half star, we could use CSS masking or a gradient, but simple approach for ★ is using linear-gradient */
+.star.half {
+  color: var(--color-neutral-300);
+  position: relative;
+}
+
+.star.half::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent-500);
+  overflow: hidden;
+  width: 50%;
+}
+
+/* Sizes */
+.size-sm .star {
+  font-size: var(--text-sm);
+}
+
+.size-md .star {
+  font-size: var(--text-lg);
+}
+
+.size-lg .star {
+  font-size: var(--text-2xl);
+}
+
+.value {
+  font-weight: 600;
+  color: var(--color-neutral-900);
+  font-size: var(--text-sm);
+  margin-left: 2px;
+}
+
+.reviewCount {
+  color: var(--color-neutral-500);
+  font-size: var(--text-sm);
+}
